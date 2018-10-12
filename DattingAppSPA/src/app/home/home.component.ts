@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '../../../node_modules/@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  registerMode = false;
+  values: any;
 
-  ngOnInit() {
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {}
+
+  registerToggle() {
+    this.registerMode = true;
+  }
+
+
+  cancelRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
   }
 
 }

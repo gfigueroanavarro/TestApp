@@ -19,8 +19,8 @@ namespace DatingApp.API.Data
             if(user == null)
              return null;
             
-            if(!VerifiedPasswordHash(password , user.PasswordHash , user.PasswordSalt))
-                return null;
+           /*if(!VerifiedPasswordHash(password , user.PasswordHash , user.PasswordSalt))
+                return null;*/
 
             return user;
             
